@@ -35,6 +35,12 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- shared NVIM functions
   use "neovim/nvim-lspconfig"
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+  -- Completion
+  use "hrsh7th/nvim-cmp" -- core comp plugin
+  -- use "hrsh7th/cmp-nvim-lsp" -- to integrate with native LSP
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-cmdline"
   -- color themes
   use "arcticicestudio/nord-vim"
   use "folke/tokyonight.nvim"
