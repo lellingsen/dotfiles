@@ -33,6 +33,7 @@ return packer.startup(function(use)
   -- core packages
   use "wbthomason/packer.nvim" -- Packer can manage itself
   use "nvim-lua/plenary.nvim" -- shared NVIM functions
+  use "nvim-lua/popup.nvim" -- required for some other plugins
   -- LSP and treesitter
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
@@ -58,6 +59,8 @@ return packer.startup(function(use)
       require("gitsigns").setup()
     end
   }
+  -- telescope
+  use "nvim-telescope/telescope.nvim"
   -- helpful utils
   use {"ellisonleao/glow.nvim", branch = "main"}
 

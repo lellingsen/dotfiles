@@ -30,3 +30,7 @@ keymap("v", "p", '"_dP', opts)
 
 -- lsp keymaps are in the lsp file,
 -- as they need to be done in the on_attach
+
+-- telescope
+keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
