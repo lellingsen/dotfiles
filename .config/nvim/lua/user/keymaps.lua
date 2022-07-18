@@ -21,6 +21,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 
 
 -- Move text up and down - these are <A-k> and <A-j> but Mac sends specific keycodes for them
+-- Figured it out with a `sed` command
 keymap("n", "˚", "<Esc>:m .-2<CR>==", opts)
 keymap("n", "∆", "<Esc>:m .+1<CR>==", opts)
 

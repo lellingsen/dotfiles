@@ -33,11 +33,13 @@ return packer.startup(function(use)
   -- core packages
   use "wbthomason/packer.nvim" -- Packer can manage itself
   use "nvim-lua/plenary.nvim" -- shared NVIM functions
+  -- LSP and treesitter
   use "neovim/nvim-lspconfig"
+  use "williamboman/nvim-lsp-installer"
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   -- Completion
   use "hrsh7th/nvim-cmp" -- core comp plugin
-  -- use "hrsh7th/cmp-nvim-lsp" -- to integrate with native LSP
+  use "hrsh7th/cmp-nvim-lsp" -- to integrate with native LSP
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
