@@ -45,9 +45,11 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-nvim-lua"
   -- color themes
-  use "arcticicestudio/nord-vim"
+  --use "arcticicestudio/nord-vim"
+  use 'shaunsingh/nord.nvim' -- nvim specific nord implementation
   use "folke/tokyonight.nvim"
   use "ellisonleao/gruvbox.nvim"
+  use 'marko-cerovac/material.nvim'
   -- git
   use "tpope/vim-fugitive"
   use {
