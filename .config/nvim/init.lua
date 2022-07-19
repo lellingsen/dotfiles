@@ -5,4 +5,5 @@ require "user.colors"
 require "user.keymaps"
 require "user.completion"
 require "user.telescope"
-
+require "user.treesitter"
+require "user.lualine"

@@ -48,6 +48,7 @@ return packer.startup(function(use)
   -- color themes
   --use "arcticicestudio/nord-vim"
   use 'shaunsingh/nord.nvim' -- nvim specific nord implementation
+  use 'rmehri01/onenord.nvim' -- combination of onedark and nord
   use "folke/tokyonight.nvim"
   use "ellisonleao/gruvbox.nvim"
   use 'marko-cerovac/material.nvim'
@@ -58,6 +59,11 @@ return packer.startup(function(use)
     config = function()
       require("gitsigns").setup()
     end
+  }
+  -- lualine
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   -- telescope
   use "nvim-telescope/telescope.nvim"

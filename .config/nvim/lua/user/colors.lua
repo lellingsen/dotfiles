@@ -4,10 +4,16 @@ require("gruvbox").setup({
   italic = false
 })
 
+require("material").setup({
+  disable = {
+    colored_cursor = true
+  }
+})
+
 vim.g.nord_borders = true
 vim.g.nord_italic = false
 
-local colorscheme = "nord"
+local colorscheme = "onenord"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
