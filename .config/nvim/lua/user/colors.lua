@@ -10,6 +10,13 @@ require("material").setup({
   }
 })
 
+require("onenord").setup({
+  fade_nc = true,
+  styles = {
+    comments = "italic",
+  },
+})
+
 vim.g.nord_borders = true
 vim.g.nord_italic = false
 
