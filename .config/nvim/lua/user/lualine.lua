@@ -6,5 +6,26 @@ end
 lualine.setup({
   options = {
     theme = "onenord"
-  }
+  },
+  sections = {
+    lualine_c = {
+      {
+        'filename',
+        path = 1,
+      }
+    },
+    lualine_x = {
+    },
+    lualine_y = {
+      'filetype'
+    },
+  },
+  inactive_sections = {
+    lualine_c = {
+      {
+        'filename',
+        path = 1,
+      }
+    },
+  },
 })
