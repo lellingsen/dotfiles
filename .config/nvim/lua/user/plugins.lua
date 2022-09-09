@@ -38,6 +38,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+  use { "jose-elias-alvarez/null-ls.nvim" }
   -- Completion
   use "hrsh7th/nvim-cmp" -- core comp plugin
   use "hrsh7th/cmp-nvim-lsp" -- to integrate with native LSP
@@ -46,12 +47,12 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-nvim-lua"
   -- color themes
-  --use "arcticicestudio/nord-vim"
   use 'shaunsingh/nord.nvim' -- nvim specific nord implementation
   use 'rmehri01/onenord.nvim' -- combination of onedark and nord
   use "folke/tokyonight.nvim"
   use "ellisonleao/gruvbox.nvim"
   use 'marko-cerovac/material.nvim'
+  use 'sainnhe/everforest'
   -- git
   use "tpope/vim-fugitive"
   use {
@@ -67,6 +68,7 @@ return packer.startup(function(use)
   }
   -- telescope
   use "nvim-telescope/telescope.nvim"
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   -- helpful utils
   use {"ellisonleao/glow.nvim", branch = "main"}
 

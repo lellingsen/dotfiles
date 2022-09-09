@@ -33,5 +33,9 @@ keymap("v", "p", '"_dP', opts)
 
 -- telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>F", "<cmd>Telescope find_files hidden=true<cr>", opts)
 keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
+
+-- null-ls
+keymap("n", "<leader>m", "<cmd>lua vim.lsp.buf.formatting()<cr>", opts)
