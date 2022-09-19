@@ -100,10 +100,6 @@ cmp.setup {
     { name = "buffer" },
     { name = "path" },
   },
-  confirm_opts = {
-    behavior = cmp.ConfirmBehavior.Replace,
-    select = false,
-  },
   window = {
     documentation = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
