@@ -15,6 +15,15 @@ telescope.setup {
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
     }
   },
+  pickers = {
+    buffers = {
+      mappings = {
+        n = {
+          ["<c-d>"] = "delete_buffer",
+        },
+      },
+    },
+  },
 }
 
 telescope.load_extension("fzf")
