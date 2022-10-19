@@ -46,6 +46,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-nvim-lua"
+  use "dcampos/nvim-snippy"
+  use "dcampos/cmp-snippy"
   -- color themes
   use 'shaunsingh/nord.nvim' -- nvim specific nord implementation
   use 'rmehri01/onenord.nvim' -- combination of onedark and nord
