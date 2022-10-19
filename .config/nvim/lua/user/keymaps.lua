@@ -38,4 +38,4 @@ keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -- null-ls
-keymap("n", "<leader>m", "<cmd>lua vim.lsp.buf.formatting()<cr>", opts)
+keymap("n", "<leader>m", "<cmd>lua vim.lsp.buf.format { async = true }<cr>", opts)
