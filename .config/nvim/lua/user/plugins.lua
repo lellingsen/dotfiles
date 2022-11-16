@@ -73,6 +73,7 @@ return packer.startup(function(use)
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   -- helpful utils
   use {"ellisonleao/glow.nvim", branch = "main"}
+  use "gpanders/editorconfig.nvim"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
