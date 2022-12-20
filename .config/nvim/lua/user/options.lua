@@ -28,5 +28,5 @@ opt.backup = false
 opt.hlsearch = true
 opt.incsearch = true
 opt.ignorecase = true
-
+-- use system clipboard
 opt.clipboard = "unnamedplus"

@@ -1,7 +1,7 @@
 vim.o.background = "dark"
 
 require("gruvbox").setup({
-  italic = false
+  italic = true
 })
 
 require("material").setup({
