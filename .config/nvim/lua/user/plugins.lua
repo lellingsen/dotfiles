@@ -34,11 +34,13 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Packer can manage itself
   use "nvim-lua/plenary.nvim" -- shared NVIM functions
   use "nvim-lua/popup.nvim" -- required for some other plugins
-  -- LSP and treesitter
-  use "neovim/nvim-lspconfig"
-  use "williamboman/nvim-lsp-installer"
+  -- LSP, treesitter, DAP, Mason
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   use { "jose-elias-alvarez/null-ls.nvim" }
+  use "mfussenegger/nvim-dap"
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
+  use "neovim/nvim-lspconfig"
   -- Completion
   use "hrsh7th/nvim-cmp" -- core comp plugin
   use "hrsh7th/cmp-nvim-lsp" -- to integrate with native LSP
