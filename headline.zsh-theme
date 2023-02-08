@@ -73,17 +73,17 @@ IS_SSH=$? # 0=true, 1=false
 # The style aliases for ANSI SGR codes (defined above) can be used there too
 
 # Info segments
-HEADLINE_DO_USER=true
+HEADLINE_DO_USER=false
 HEADLINE_DO_HOST=true
 HEADLINE_DO_PATH=true
 HEADLINE_DO_GIT_BRANCH=true
 HEADLINE_DO_GIT_STATUS=true
 
 # Info symbols (optional)
-HEADLINE_USER_PREFIX='' # consider " "
-HEADLINE_HOST_PREFIX='' # consider " "
-HEADLINE_PATH_PREFIX='' # consider " "
-HEADLINE_BRANCH_PREFIX='' # consider " "
+HEADLINE_USER_PREFIX=' ' # consider " "
+HEADLINE_HOST_PREFIX=' ' # consider " "
+HEADLINE_PATH_PREFIX=' ' # consider " "
+HEADLINE_BRANCH_PREFIX=' ' # consider " "
 
 # Info joints
 HEADLINE_USER_BEGIN=''
