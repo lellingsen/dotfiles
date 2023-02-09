@@ -74,7 +74,7 @@ IS_SSH=$? # 0=true, 1=false
 
 # Info segments
 HEADLINE_DO_USER=false
-HEADLINE_DO_HOST=true
+HEADLINE_DO_HOST=false
 HEADLINE_DO_PATH=true
 HEADLINE_DO_GIT_BRANCH=true
 HEADLINE_DO_GIT_STATUS=true
@@ -155,7 +155,7 @@ HEADLINE_PROMPT='%(#.#.%(!.!.$)) ' # consider "%#"
 HEADLINE_RPROMPT=''
 
 # Clock (prepends to RPROMPT)
-HEADLINE_DO_CLOCK=false # whether to show the clock
+HEADLINE_DO_CLOCK=true # whether to show the clock
 HEADLINE_STYLE_CLOCK=$faint
 HEADLINE_CLOCK_FORMAT='%l:%M:%S %p' # consider "%+" for full date (see man strftime)
 
