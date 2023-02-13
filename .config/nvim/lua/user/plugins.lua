@@ -76,6 +76,12 @@ return packer.startup(function(use)
   -- helpful utils
   use {"ellisonleao/glow.nvim", branch = "main"}
   use "gpanders/editorconfig.nvim"
+  use {
+    "numToStr/Comment.nvim",
+    config = function ()
+      require('Comment').setup()
+    end
+  }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
