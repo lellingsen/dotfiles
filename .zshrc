@@ -28,6 +28,7 @@ alias smartupdate-leeloo="(cd ~/Projects/localization && node update.js --projec
 alias smartupdate-extension="node update.js --project Extension --repository ~/Projects/extension-monorepo/packages/webextension --resource ExtensionV2.json"
 alias smartforce-leeloo="node update.js --project WebApp --repository ~/Projects/extension-monorepo/packages/leeloo --resource WebApp.json --forceUploadTranslations"
 alias smartforce-extension="node update.js --project Extension --repository ~/Projects/extension-monorepo/packages/webextension --resource ExtensionV2.json --forceUploadTranslations"
+alias ut="pnpm test:unit"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
