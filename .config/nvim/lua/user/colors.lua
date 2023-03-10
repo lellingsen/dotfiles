@@ -20,7 +20,7 @@ require("onenord").setup({
 vim.g.nord_borders = true
 vim.g.nord_italic = false
 
-local colorscheme = "everforest"
+local colorscheme = "onenord"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
