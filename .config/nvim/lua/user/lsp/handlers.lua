@@ -82,8 +82,9 @@ local function lsp_keymaps(bufnr)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
-on_attach = function(client, bufnr)
+local on_attach = function(client, bufnr)
   if client.name == "tsserver" then
+    -- Turn off formatting for TS, let Prettier handle it
     client.server_capabilities.document_formatting = false
   end
   lsp_keymaps(bufnr)
