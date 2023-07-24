@@ -20,6 +20,22 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
+config.window_background_opacity = 0.85
+config.adjust_window_size_when_changing_font_size = false
+config.keys = {
+    -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
+    {
+        key="LeftArrow",
+        mods="OPT",
+        action=wezterm.action{SendString="\x1bb"}
+    },
+    -- Make Option-Right equivalent to Alt-f; forward-word
+    {
+        key="RightArrow",
+        mods="OPT",
+        action=wezterm.action{SendString="\x1bf"}
+    },
+}
 
 -- and finally, return the configuration to wezterm
 return config
