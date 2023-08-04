@@ -20,7 +20,7 @@ config.window_padding = {
   top = 0,
   bottom = 0,
 }
-config.window_background_opacity = 0.85
+-- config.window_background_opacity = 0.85
 config.adjust_window_size_when_changing_font_size = false
 config.keys = {
     -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
