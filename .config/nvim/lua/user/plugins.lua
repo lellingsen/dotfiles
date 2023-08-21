@@ -57,6 +57,7 @@ return packer.startup(function(use)
   use "ellisonleao/gruvbox.nvim"
   use 'marko-cerovac/material.nvim'
   use 'sainnhe/everforest'
+  use 'AlexvZyl/nordic.nvim'
   -- git
   use "tpope/vim-fugitive"
   use {

@@ -16,10 +16,19 @@ require("onenord").setup({
   },
 })
 
+local c = require("nordic.colors")
+require("nordic").load({
+    override = {
+        Visual = {
+            bg = c.gray2
+        }
+    }
+})
+
 vim.g.nord_borders = true
 vim.g.nord_italic = false
 
-local colorscheme = "onenord"
+local colorscheme = "nordic"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
