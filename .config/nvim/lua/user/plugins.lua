@@ -72,7 +72,15 @@ return packer.startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   -- telescope
-  use "nvim-telescope/telescope.nvim"
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      { "nvim-telescope/telescope-live-grep-args.nvim" }
+    },
+    config = function()
+      require("telescope").load_extension("live_Grep_args")
+    end
+  }
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   -- helpful utils
   use {"ellisonleao/glow.nvim", branch = "main"}
