@@ -109,6 +109,8 @@ return packer.startup(function(use)
       require("copilot_cmp").setup()
     end
   }
+  -- Astro syntax not supported by default
+  use 'wuelnerdotexe/vim-astro'
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
