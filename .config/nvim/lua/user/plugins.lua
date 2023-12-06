@@ -58,6 +58,8 @@ return packer.startup(function(use)
   use 'marko-cerovac/material.nvim'
   use 'sainnhe/everforest'
   use 'AlexvZyl/nordic.nvim'
+  use 'sainnhe/sonokai'
+  use { "catppuccin/nvim", as = "catppuccin" }
   -- git
   use "tpope/vim-fugitive"
   use {

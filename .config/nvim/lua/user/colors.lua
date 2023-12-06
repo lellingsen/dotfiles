@@ -25,6 +25,13 @@ require("nordic").load({
     }
 })
 
+require("catppuccin").setup({
+    flavour = "macchiato"
+})
+
+vim.g.sonokai_style = 'espresso'
+vim.g.sonokai_better_performance = 1
+
 vim.g.nord_borders = true
 vim.g.nord_italic = false
 
