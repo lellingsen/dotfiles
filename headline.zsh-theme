@@ -74,14 +74,14 @@ IS_SSH=$? # 0=true, 1=false
 
 # Info segments
 HEADLINE_DO_USER=false
-HEADLINE_DO_HOST=false
+HEADLINE_DO_HOST=true
 HEADLINE_DO_PATH=true
 HEADLINE_DO_GIT_BRANCH=true
 HEADLINE_DO_GIT_STATUS=true
 
 # Info symbols (optional)
 HEADLINE_USER_PREFIX=' ' # consider " "
-HEADLINE_HOST_PREFIX=' ' # consider " "
+HEADLINE_HOST_PREFIX='󰇅 ' # consider " "
 HEADLINE_PATH_PREFIX=' ' # consider " "
 HEADLINE_BRANCH_PREFIX=' ' # consider " "
 
@@ -366,7 +366,8 @@ headline_precmd() {
   # Information
   local user_str host_str path_str branch_str status_str
   [[ $HEADLINE_DO_USER == 'true' ]] && user_str=$USER
-  [[ $HEADLINE_DO_HOST == 'true' ]] && host_str=$(hostname -s)
+  venv_str=$(basename "$VIRTUAL_ENV")
+  [[ $HEADLINE_DO_HOST == 'true' ]] && host_str=${venv_str:=$(hostname -s)}
   [[ $HEADLINE_DO_PATH == 'true' ]] && path_str=$(print -rP '%~')
   [[ $HEADLINE_DO_GIT_BRANCH == 'true' ]] && branch_str=$(headline_git_branch)
   [[ $HEADLINE_DO_GIT_STATUS == 'true' ]] && status_str=$(headline_git_status)
