@@ -30,3 +30,8 @@ opt.incsearch = true
 opt.ignorecase = true
 -- use system clipboard
 opt.clipboard = "unnamedplus"
+-- whitespace characters
+opt.list = true
+opt.listchars:append({tab = "▸ "})
+opt.listchars:append({space = "·"})
+opt.listchars:append({eol = ""})
