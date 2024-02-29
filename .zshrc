@@ -25,7 +25,9 @@ export NVM_DIR="$HOME/.nvm"
 export NODE_OPTIONS=--max_old_space_size=4096
 
 gch() {
- git checkout “$(git branch — all | fzf| tr -d ‘[:space:]’)”
+    git checkout $(git branch --all | fzf| tr -d "[[:space:]]")
 }
 
-source ~/.datavant.zshrc
+if [ -e ~/.datavant.zshrc ]; then
+    source ~/.datavant.zshrc
+fi
