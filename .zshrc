@@ -16,24 +16,16 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="nvim ~/.zshrc"
 alias aliases="bat ~/.zshrc | grep 'alias '"
 alias vim='nvim'
-alias todo='vim ~/Notes/Quick/todo.md'
-alias today='vim ~/Notes/Daily/$(date +%Y-%m-%d.md)'
-alias yesterday='vim ~/Notes/Daily/$(date -v-1d +%Y-%m-%d.md)'
 alias lg='lazygit'
-alias smartpull-leeloo="(cd ~/Projects/localization && node pull.js --project WebApp --repository ~/Projects/extension-monorepo/packages/leeloo --resource WebApp.json)"
-alias smartpull-extension="node pull.js --project Extension --repository ~/Projects/extension-monorepo/packages/webextension --resource ExtensionV2.json"
-alias smartadd-leeloo="(cd ~/Projects/localization && node update.js --project WebApp --repository ~/Projects/extension-monorepo/packages/leeloo --resource WebApp.json --preserveLocalTranslations)"
-alias smartadd-extension="node update.js --project Extension --repository ~/Projects/extension-monorepo/packages/webextension --resource ExtensionV2.json --preserveLocalTranslations"
-alias smartupdate-leeloo="(cd ~/Projects/localization && node update.js --project WebApp --repository ~/Projects/extension-monorepo/packages/leeloo --resource WebApp.json)"
-alias smartupdate-extension="node update.js --project Extension --repository ~/Projects/extension-monorepo/packages/webextension --resource ExtensionV2.json"
-alias smartforce-leeloo="node update.js --project WebApp --repository ~/Projects/extension-monorepo/packages/leeloo --resource WebApp.json --forceUploadTranslations"
-alias smartforce-extension="node update.js --project Extension --repository ~/Projects/extension-monorepo/packages/webextension --resource ExtensionV2.json --forceUploadTranslations"
-alias ut="pnpm test:unit"
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export NODE_OPTIONS=--max_old_space_size=4096
+
+gch() {
+ git checkout “$(git branch — all | fzf| tr -d ‘[:space:]’)”
+}
 
 source ~/.datavant.zshrc
