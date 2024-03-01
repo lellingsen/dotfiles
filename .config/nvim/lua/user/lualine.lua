@@ -5,7 +5,7 @@ end
 
 lualine.setup({
   options = {
-    theme = "nordic"
+    theme = "everforest"
   },
   sections = {
     lualine_c = {
