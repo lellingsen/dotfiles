@@ -114,4 +114,8 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
+require'py_lsp'.setup {
+  default_venv_name = ".venv" -- For local venv
+}
+
 setup()

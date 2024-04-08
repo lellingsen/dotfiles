@@ -113,6 +113,8 @@ return packer.startup(function(use)
   }
   -- Astro syntax not supported by default
   use 'wuelnerdotexe/vim-astro'
+  -- Helper for Python LSP stuff with virtual environments
+  use 'HallerPatrick/py_lsp.nvim'
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
