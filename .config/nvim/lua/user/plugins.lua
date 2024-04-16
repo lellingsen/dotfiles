@@ -41,6 +41,7 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"
+  use "nvim-treesitter/nvim-treesitter-context"
   -- Completion
   use "hrsh7th/nvim-cmp" -- core comp plugin
   use "hrsh7th/cmp-nvim-lsp" -- to integrate with native LSP
