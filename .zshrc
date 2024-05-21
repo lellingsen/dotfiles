@@ -31,3 +31,5 @@ gch() {
 if [ -e ~/.datavant.zshrc ]; then
     source ~/.datavant.zshrc
 fi
+
+eval "$(direnv hook zsh)"
