@@ -61,6 +61,7 @@ return packer.startup(function(use)
   use 'AlexvZyl/nordic.nvim'
   use 'sainnhe/sonokai'
   use { "catppuccin/nvim", as = "catppuccin" }
+  use 'Mofiqul/dracula.nvim'
   -- git
   use "tpope/vim-fugitive"
   use {
