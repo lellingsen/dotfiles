@@ -5,7 +5,7 @@ end
 
 lualine.setup({
   options = {
-    theme = "everforest"
+    theme = "dracula"
   },
   sections = {
     lualine_c = {
