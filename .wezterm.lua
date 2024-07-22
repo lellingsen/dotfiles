@@ -11,7 +11,7 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
-config.color_scheme = 'Dracula (Official)' --'Everforest Dark (Gogh)', 'nordfox', 'GruvboxDark', 'nord', 'Catppuccin Macchiato (Gogh)', 'nordic' (added custom)
+config.color_scheme = 'nordfox'--'Dracula (Official)', 'Everforest Dark (Gogh)', 'nordfox', 'GruvboxDark', 'nord', 'Catppuccin Macchiato (Gogh)', 'nordic' (added custom)
 config.font_size = 17
 config.hide_tab_bar_if_only_one_tab = true
 config.window_padding = {
