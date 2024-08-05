@@ -9,13 +9,6 @@ require("material").setup({
   }
 })
 
-require("onenord").setup({
-  fade_nc = true,
-  styles = {
-    comments = "italic",
-  },
-})
-
 local c = require("nordic.colors")
 require("nordic").load({
     override = {
