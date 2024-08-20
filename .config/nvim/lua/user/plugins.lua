@@ -32,8 +32,8 @@ end
 return packer.startup(function(use)
     -- core packages
     use "wbthomason/packer.nvim" -- Packer can manage itself
-    use "nvim-lua/plenary.nvim" -- shared NVIM functions
-    use "nvim-lua/popup.nvim"  -- required for some other plugins
+    use "nvim-lua/plenary.nvim"  -- shared NVIM functions
+    use "nvim-lua/popup.nvim"    -- required for some other plugins
     -- LSP, treesitter, DAP, Mason
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
     use { "jose-elias-alvarez/null-ls.nvim" }
@@ -43,7 +43,7 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig"
     use "nvim-treesitter/nvim-treesitter-context"
     -- Completion
-    use "hrsh7th/nvim-cmp"   -- core comp plugin
+    use "hrsh7th/nvim-cmp"     -- core comp plugin
     use "hrsh7th/cmp-nvim-lsp" -- to integrate with native LSP
     use "hrsh7th/cmp-buffer"
     use "hrsh7th/cmp-path"
@@ -119,6 +119,13 @@ return packer.startup(function(use)
     -- Markdown preview
     use "nvim-tree/nvim-web-devicons"
     use "OXY2DEV/markview.nvim"
+    use "almo7aya/openingh.nvim"
+    use({
+        "stevearc/oil.nvim",
+        config = function()
+            require("oil").setup()
+        end,
+    })
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
