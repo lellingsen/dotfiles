@@ -8,7 +8,7 @@ telescope.setup {
     prompt_prefix = "  ",
     layout_config = {
       horizontal = {
-        preview_width = 0.3
+        preview_width = 0.5
       },
     },
   },
