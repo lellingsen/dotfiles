@@ -123,7 +123,11 @@ return packer.startup(function(use)
     use({
         "stevearc/oil.nvim",
         config = function()
-            require("oil").setup()
+            require("oil").setup({
+                view_options = {
+                    show_hidden = true
+                },
+            })
         end,
     })
     if PACKER_BOOTSTRAP then

@@ -31,6 +31,9 @@ keymap("v", "p", '"_dP', opts)
 -- lsp keymaps are in the lsp file,
 -- as they need to be done in the on_attach
 
+-- explorer
+keymap("n", "<leader>e", "<cmd>Oil<cr>", opts)
+
 -- telescope
 keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "<leader>F", "<cmd>Telescope find_files hidden=true<cr>", opts)
