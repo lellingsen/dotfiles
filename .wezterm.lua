@@ -14,6 +14,7 @@ end
 config.color_scheme = 'Catppuccin Frappe'--'Dracula (Official)', 'Everforest Dark (Gogh)', 'nordfox', 'GruvboxDark', 'nord', 'Catppuccin Macchiato (Gogh)', 'nordic' (added custom)
 config.font_size = 17
 config.hide_tab_bar_if_only_one_tab = true
+config.window_decorations = "RESIZE"
 config.window_padding = {
   left = 0,
   right = 0,
