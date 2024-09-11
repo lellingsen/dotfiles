@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="headline"
+ZSH_THEME="robbyrussell"
 
 export GPG_TTY=$(tty)
 
@@ -9,7 +9,7 @@ export GPG_TTY=$(tty)
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git fzf zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git fzf zsh-autosuggestions zsh-syntax-highlighting virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
