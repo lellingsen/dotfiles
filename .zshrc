@@ -35,3 +35,5 @@ fi
 eval "$(direnv hook zsh)"
 
 export PATH=$HOME/.dotnet/tools:$PATH
+
+export KUBE_EDITOR="nvim"
