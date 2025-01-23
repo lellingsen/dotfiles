@@ -9,13 +9,12 @@ require("material").setup({
   }
 })
 
-local c = require("nordic.colors")
-require("nordic").load({
-    override = {
-        Visual = {
-            bg = c.gray2
+require('nordic').setup({
+    on_highlight = function(highlights, palette)
+        highlights.Visual = {
+            bg = palette.gray2
         }
-    }
+    end
 })
 
 require("catppuccin").setup({
