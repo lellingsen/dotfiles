@@ -130,7 +130,7 @@ return packer.startup(function(use)
                 keymaps = {
                   ["<C-h>"] = false,
                   ["<C-l>"] = false,
-                  ["<C-w>"] = "actions.refresh",
+                  ["<C-x>"] = "actions.refresh",
                 },
             })
         end,
