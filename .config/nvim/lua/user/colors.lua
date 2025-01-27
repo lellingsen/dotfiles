@@ -4,9 +4,9 @@ require("gruvbox").setup({
 })
 
 require("material").setup({
-  disable = {
-    colored_cursor = true
-  }
+    disable = {
+        colored_cursor = true
+    }
 })
 
 require('nordic').setup({
@@ -18,7 +18,10 @@ require('nordic').setup({
 })
 
 require("catppuccin").setup({
-    flavour = "frappe"
+    flavour = "frappe",
+    styles = {
+        conditionals = {},
+    }
 })
 
 vim.g.sonokai_style = 'espresso'
@@ -32,6 +35,6 @@ local colorscheme = "catppuccin"
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
 if not status_ok then
-  vim.notify("colorscheme " .. colorscheme .. " not found!")
-  return
+    vim.notify("colorscheme " .. colorscheme .. " not found!")
+    return
 end
