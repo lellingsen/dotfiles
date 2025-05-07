@@ -11,7 +11,7 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
-config.color_scheme = 'Everforest Dark (Gogh)' --  'Catppuccin Frappe', 'Dracula (Official)', 'Everforest Dark (Gogh)', 'nordfox', 'GruvboxDark', 'nord', 'Catppuccin Macchiato (Gogh)', 'nordic' (added custom)
+config.color_scheme = 'Catppuccin Frappe' --  'Catppuccin Frappe', 'Dracula (Official)', 'Everforest Dark (Gogh)', 'nordfox', 'GruvboxDark', 'nord', 'Catppuccin Macchiato (Gogh)', 'nordic' (added custom)
 config.font_size = 19
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"
