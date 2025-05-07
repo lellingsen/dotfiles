@@ -100,15 +100,6 @@ end
 
 capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
-require("mason-lspconfig").setup_handlers {
-  function (server_name) -- default handler
-    require("lspconfig")[server_name].setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
-    }
-  end,
-}
-
 -- Make runtime files discoverable to the server
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
