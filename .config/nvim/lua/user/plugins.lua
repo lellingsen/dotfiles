@@ -36,7 +36,7 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim"    -- required for some other plugins
     -- LSP, treesitter, DAP, Mason
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
-    use { "jose-elias-alvarez/null-ls.nvim" }
+    use "nvimtools/none-ls.nvim"
     use "mfussenegger/nvim-dap"
     use "williamboman/mason.nvim"
     use "williamboman/mason-lspconfig.nvim"
