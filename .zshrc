@@ -36,6 +36,8 @@ eval "$(direnv hook zsh)"
 
 eval "$(zoxide init zsh)"
 
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
 export PATH=$HOME/.dotnet/tools:$PATH
 
 export KUBE_EDITOR="nvim"
