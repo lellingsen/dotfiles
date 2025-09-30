@@ -118,7 +118,6 @@ return packer.startup(function(use)
     use 'HallerPatrick/py_lsp.nvim'
     -- Markdown preview
     use "nvim-tree/nvim-web-devicons"
-    use "OXY2DEV/markview.nvim"
     use "almo7aya/openingh.nvim"
     use({
         "stevearc/oil.nvim",
