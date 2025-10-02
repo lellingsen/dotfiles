@@ -8,7 +8,9 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
   debug = false,
   sources = {
-    formatting.prettier,
+    formatting.prettier.with({
+      prefer_local = "node_modules/.bin",
+    }),
     formatting.black,
   },
 })
