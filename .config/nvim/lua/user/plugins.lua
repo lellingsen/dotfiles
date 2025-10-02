@@ -63,6 +63,7 @@ return packer.startup(function(use)
     use 'Mofiqul/dracula.nvim'
     -- git
     use "tpope/vim-fugitive"
+    use "tpope/vim-sleuth"
     use {
         "lewis6991/gitsigns.nvim",
         config = function()
