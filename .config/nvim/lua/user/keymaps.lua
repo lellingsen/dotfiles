@@ -42,4 +42,4 @@ keymap("n", "<leader>G", "<cmd>lua require('telescope').extensions.live_grep_arg
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -- null-ls
-keymap("n", "<leader>m", "<cmd>lua vim.lsp.buf.format { filter = function(client) return client.name == 'null-ls' end }<cr>", opts)
+keymap("n", "<leader>m", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
