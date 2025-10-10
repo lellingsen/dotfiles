@@ -61,6 +61,7 @@ return packer.startup(function(use)
     use 'sainnhe/sonokai'
     use { "catppuccin/nvim", as = "catppuccin" }
     use 'Mofiqul/dracula.nvim'
+    use 'f-person/auto-dark-mode.nvim'
     -- git
     use "tpope/vim-fugitive"
     use "tpope/vim-sleuth"
