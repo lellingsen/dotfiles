@@ -1,5 +1,8 @@
 vim.o.background = "dark"
 
+local colorscheme = "rose-pine-moon"
+local light_colorscheme = "rose-pine-dawn"
+
 require("gruvbox").setup({
     italic = {
         strings = false,
@@ -27,16 +30,16 @@ require("catppuccin").setup({
     }
 })
 
-auto_dark_mode = require("auto-dark-mode")
+local auto_dark_mode = require("auto-dark-mode")
 auto_dark_mode.setup({
     update_interval = 1000,
     set_dark_mode = function()
         vim.o.background = "dark"
-        vim.cmd("colorscheme catppuccin-frappe")
+        vim.cmd("colorscheme " .. colorscheme)
     end,
     set_light_mode = function()
         vim.o.background = "light"
-        vim.cmd("colorscheme catppuccin-latte")
+        vim.cmd("colorscheme " .. light_colorscheme)
     end,
 })
 auto_dark_mode.init()
@@ -46,8 +49,6 @@ vim.g.sonokai_better_performance = 1
 
 vim.g.nord_borders = true
 vim.g.nord_italic = false
-
-local colorscheme = "catppuccin"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 

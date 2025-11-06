@@ -62,6 +62,7 @@ return packer.startup(function(use)
     use { "catppuccin/nvim", as = "catppuccin" }
     use 'Mofiqul/dracula.nvim'
     use 'f-person/auto-dark-mode.nvim'
+    use 'rose-pine/neovim'
     -- git
     use "tpope/vim-fugitive"
     use "tpope/vim-sleuth"
