@@ -64,7 +64,9 @@ end
 
 lualine.setup({
   options = {
-    theme = colorscheme,
+    --theme = colorscheme,
+    -- using auto for rose-pine; doesn't seem to be available otherwise
+    theme = "auto",
   },
   sections = {
     lualine_c = {
