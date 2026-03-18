@@ -11,6 +11,6 @@ null_ls.setup({
     formatting.prettier.with({
       prefer_local = "node_modules/.bin",
     }),
-    formatting.ruff_format,
+    -- Python formatting handled by ruff LSP
   },
 })
