@@ -41,3 +41,4 @@ eval "$(zoxide init zsh)"
 export PATH=$HOME/.dotnet/tools:$PATH
 
 export KUBE_EDITOR="nvim"
+export EDITOR="nvim"
