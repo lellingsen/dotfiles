@@ -123,7 +123,7 @@ return packer.startup(function(use)
     use "nvim-tree/nvim-web-devicons"
     use "almo7aya/openingh.nvim"
     use({
-        "stevearc/oil.nvim",
+        "barrettruth/canola.nvim",
         config = function()
             require("oil").setup({
                 view_options = {
