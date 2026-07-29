@@ -37,9 +37,16 @@ return packer.startup(function(use)
     -- LSP, treesitter, DAP, Mason
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
     use "nvimtools/none-ls.nvim"
+    use "nvimtools/none-ls-extras.nvim" -- eslint_d moved here out of core
     use "mfussenegger/nvim-dap"
+    use "mfussenegger/nvim-dap-python"
+    use "rcarriga/nvim-dap-ui"
+    use "nvim-neotest/nvim-nio" -- required by nvim-dap-ui
+    use "theHamsta/nvim-dap-virtual-text"
+    use "mxsdev/nvim-dap-vscode-js"
     use "williamboman/mason.nvim"
     use "williamboman/mason-lspconfig.nvim"
+    use "WhoIsSethDaniel/mason-tool-installer.nvim"
     use "neovim/nvim-lspconfig"
     use "nvim-treesitter/nvim-treesitter-context"
     -- Completion
@@ -91,6 +98,8 @@ return packer.startup(function(use)
     -- helpful utils
     use { "ellisonleao/glow.nvim", branch = "main" }
     use "gpanders/editorconfig.nvim"
+    use "folke/which-key.nvim"
+    use "folke/todo-comments.nvim"
     use {
         "numToStr/Comment.nvim",
         config = function()

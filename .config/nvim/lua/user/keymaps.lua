@@ -40,6 +40,7 @@ keymap("n", "<leader>F", "<cmd>Telescope find_files hidden=true<cr>", opts)
 keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>G", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", opts)
 keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", "<leader>t", "<cmd>TodoTelescope<cr>", opts)
 
 -- null-ls
 keymap("n", "<leader>m", "<cmd>lua vim.lsp.buf.format({ filter = function(client) return client.name ~= 'ts_ls' end })<cr>", opts)
