@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-which_key.setup()
+which_key.setup({ delay = 300 })
 
 which_key.add({
   { "<leader>d", group = "Debug" },

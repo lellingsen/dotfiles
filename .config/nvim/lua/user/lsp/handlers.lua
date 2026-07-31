@@ -31,14 +31,6 @@ setup = function()
     }
 
     vim.diagnostic.config(config)
-
-    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-        border = "rounded",
-    })
-
-    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-        border = "rounded",
-    })
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -71,8 +63,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         map('gi', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
         map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
         map('gl', vim.diagnostic.open_float, '[L]ine Diagnostics')
-        map('<leader>k', vim.lsp.buf.hover, 'Hover Documentation')
-        map('<leader>K', vim.lsp.buf.signature_help, 'Signature Documentation')
+        map('<leader>k', function() vim.lsp.buf.hover({ border = 'rounded' }) end, 'Hover Documentation')
+        map('<leader>K', function() vim.lsp.buf.signature_help({ border = 'rounded' }) end, 'Signature Documentation')
         map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
     end
 })
