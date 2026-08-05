@@ -35,7 +35,7 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim"  -- shared NVIM functions
     use "nvim-lua/popup.nvim"    -- required for some other plugins
     -- LSP, treesitter, DAP, Mason
-    use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+    use { "nvim-treesitter/nvim-treesitter", branch = "main" }
     use "nvimtools/none-ls.nvim"
     use "nvimtools/none-ls-extras.nvim" -- eslint_d moved here out of core
     use "mfussenegger/nvim-dap"
@@ -48,7 +48,6 @@ return packer.startup(function(use)
     use "williamboman/mason-lspconfig.nvim"
     use "WhoIsSethDaniel/mason-tool-installer.nvim"
     use "neovim/nvim-lspconfig"
-    use "nvim-treesitter/nvim-treesitter-context"
     -- Completion
     use "hrsh7th/nvim-cmp"     -- core comp plugin
     use "hrsh7th/cmp-nvim-lsp" -- to integrate with native LSP
