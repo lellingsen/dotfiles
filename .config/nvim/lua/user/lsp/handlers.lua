@@ -35,12 +35,12 @@ end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+local status_ok, blink_cmp = pcall(require, "blink.cmp")
 if not status_ok then
     return
 end
 
-capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
+capabilities = blink_cmp.get_lsp_capabilities(capabilities)
 
 -- Make runtime files discoverable to the server
 local runtime_path = vim.split(package.path, ';')

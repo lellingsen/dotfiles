@@ -49,14 +49,10 @@ return packer.startup(function(use)
     use "WhoIsSethDaniel/mason-tool-installer.nvim"
     use "neovim/nvim-lspconfig"
     -- Completion
-    use "hrsh7th/nvim-cmp"     -- core comp plugin
-    use "hrsh7th/cmp-nvim-lsp" -- to integrate with native LSP
-    use "hrsh7th/cmp-buffer"
-    use "hrsh7th/cmp-path"
-    use "hrsh7th/cmp-cmdline"
-    use "hrsh7th/cmp-nvim-lua"
-    use "dcampos/nvim-snippy"
-    use "dcampos/cmp-snippy"
+    use {
+        "saghen/blink.cmp",
+        tag = "v1.*", -- use prebuilt binaries instead of building from source
+    }
     -- color themes
     use 'shaunsingh/nord.nvim' -- nvim specific nord implementation
     use "folke/tokyonight.nvim"
@@ -103,24 +99,6 @@ return packer.startup(function(use)
         "numToStr/Comment.nvim",
         config = function()
             require('Comment').setup()
-        end
-    }
-    use {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function()
-            require("copilot").setup({
-                suggestion = { enabled = false },
-                panel = { enabled = false },
-            })
-        end,
-    }
-    use {
-        "zbirenbaum/copilot-cmp",
-        after = { "copilot.lua" },
-        config = function()
-            require("copilot_cmp").setup()
         end
     }
     -- Astro syntax not supported by default
