@@ -53,6 +53,7 @@ return packer.startup(function(use)
         "saghen/blink.cmp",
         tag = "v1.*", -- use prebuilt binaries instead of building from source
     }
+    use "onsails/lspkind-nvim"
     -- color themes
     use 'shaunsingh/nord.nvim' -- nvim specific nord implementation
     use "folke/tokyonight.nvim"

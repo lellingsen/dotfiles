@@ -3,35 +3,6 @@ if not status_ok then
   return
 end
 
--- find more here: https://www.nerdfonts.com/cheat-sheet
-local kind_icons = {
-  Text = "󰊄",
-  Method = "m",
-  Function = "󰊕",
-  Constructor = "",
-  Field = "",
-  Variable = "",
-  Class = "",
-  Interface = "",
-  Module = "",
-  Property = "",
-  Unit = "",
-  Value = "󰮊",
-  Enum = "",
-  Keyword = "",
-  Snippet = "",
-  Color = "",
-  File = "",
-  Reference = "",
-  Folder = "",
-  EnumMember = "",
-  Constant = "",
-  Struct = "",
-  Event = "",
-  Operator = "",
-  TypeParameter = "",
-}
-
 blink.setup {
   keymap = {
     ["<C-j>"] = { "select_next" },
@@ -43,7 +14,7 @@ blink.setup {
     ["<CR>"] = { "accept", "fallback" },
   },
   appearance = {
-    kind_icons = kind_icons,
+    nerd_font_variant = "mono",
   },
   completion = {
     ghost_text = { enabled = true },
@@ -54,7 +25,18 @@ blink.setup {
     },
     menu = {
       draw = {
-        columns = { { "kind_icon" }, { "label", "label_description", gap = 1 }, { "source_name" } },
+        columns = {
+          { "kind_icon" },
+          { "label", "label_description", gap = 1 },
+          { "source_name" },
+        },
+        components = {
+          kind_icon = {
+            text = function(ctx)
+              return require("lspkind").symbol_map[ctx.kind] or ""
+            end,
+          },
+        },
       },
     },
   },
