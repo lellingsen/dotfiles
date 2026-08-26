@@ -50,3 +50,16 @@ export FZF_DEFAULT_OPTS="
 	--color=border:#44415a,header:#3e8fb0,gutter:#232136
 	--color=spinner:#f6c177,info:#9ccfd8
 	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa"
+
+# patch `gh` for `gh stack` TUI not properly switching between light and dark
+gh() {
+  if [[ $1 == "stack" ]]; then
+    if [[ "$(defaults read -g AppleInterfaceStyle 2>/dev/null)" == "Dark" ]]; then
+      GH_STACK_THEME=dark command gh "$@"
+    else
+      GH_STACK_THEME=light command gh "$@"
+    fi
+  else
+    command gh "$@"
+  fi
+}
